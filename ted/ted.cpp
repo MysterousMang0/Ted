@@ -5,7 +5,7 @@
 using namespace std;
 
 // loop trough the string and find the pos of the substring if found delete it.
-void removeSubstring(string &subString, string &mainString){
+void removeSubstring(string subString, string &mainString){
     size_t subStringPos = string::npos;
     while ((subStringPos = mainString.find(subString)) != string::npos) {       
                                                                                 
@@ -13,7 +13,7 @@ void removeSubstring(string &subString, string &mainString){
     }
 }
 // loop trough the string and find the pos of the substring if found replace it with the new substring
-void replaceSubstring(string &mainString, string &subStringToRm, string &subStringToRp) {
+void replaceSubstring(string &mainString, string subStringToRm, string subStringToRp) {
     size_t subStringPos = string::npos;
     while ((subStringPos = mainString.find(subStringToRm)) != string::npos) {
         mainString.replace(subStringPos, subStringToRm.length(), subStringToRp);
@@ -51,4 +51,5 @@ int main(int argc, char* argv[]) {
         cout << "New string: " << string_Rp;
 
     }
+
 }
